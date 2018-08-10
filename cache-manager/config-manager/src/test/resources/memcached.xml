@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<memcached>
+	<dataId>test_memcached</dataId>	
+</memcached>
+
+<!-- 灰度 -->
+<!--  client name="mclient1" protocol="redis" >
+		    <socketpool initConn="5" connectTimeout="60000" timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000" 
+			maxActive="100"   timeout="3000" hashingAlg="3">
+			<servers>172.21.40.126:7009</servers>
+		  </socketpool>
+	      </client -->
+	<!-- 
+	      
+	      
+	      <?xml version="1.0" encoding="UTF-8"?>
+<memcached>
+	<cluster name="searchlist_cluster"   clusterAlg="polling" failover="true"  type="default">
+		<client name="mclient1" protocol="redis" weight="1000000" >
+		    
+		    <socketpool initConn="5" connectTimeout="60000" timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000" 
+			maxActive="100" maxWait="1000" timeout="2000" hashingAlg="3">
+			<servers>172.21.40.19:7006,172.21.40.59:7007</servers>
+		  </socketpool>
+	      </client>
+           
+ <client name="mclient2" protocol="ssdb" weight="1" >
+		   
+		    <socketpool initConn="5" connectTimeout="60000" timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000" 
+			maxActive="100" maxWait="1000"  timeout="5000" hashingAlg="3">
+			<servers>172.18.40.36:7190,172.18.40.37:7190,172.18.184.13:7190</servers>
+		  </socketpool>
+	      </client>
+</cluster>
+</memcached>
+
+
+<client name="mclient2" protocol="ssdb" weight="1" >
+		   
+		    <socketpool initConn="5" connectTimeout="60000" timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000" 
+			maxActive="100" maxWait="1000"  timeout="5000" hashingAlg="3">
+			<servers>172.18.40.36:7190,172.18.40.37:7190,172.18.184.13:7190</servers>
+		  </socketpool>
+	      </client>
+	      
+	      
+	      <client name="mclient2" protocol="redis" weight="1" >
+		    <socketpool initConn="5" connectTimeout="60000" timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000" 
+			maxActive="100" maxWait="1000"  timeout="2000" hashingAlg="3">
+			<servers>172.21.40.19:7006,172.21.40.59:7007</servers>
+		  </socketpool>
+	      </client>
+	      
+	       -->   

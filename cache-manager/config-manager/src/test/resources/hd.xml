@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<memcached>
+	<cluster name="buyerSession"   clusterAlg="polling" failover="true"  type="default">
+		<client name="bmc1" >
+		    <socketpool initConn="5" connectTimeout="60000" timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000" 
+			maxActive="100" maxWait="1000" timeout="2000" hashingAlg="3">
+			   <servers>172.18.40.38:11211</servers>   
+		  </socketpool>
+	      </client>
+	<client name="bmc2" >
+		   
+		    <socketpool initConn="5" connectTimeout="60000" timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000" 
+			maxActive="100" maxWait="1000"  timeout="10000" hashingAlg="3">
+			<servers>172.18.40.39:11211</servers>  
+		  </socketpool>
+	 </client>
+  </cluster>
+  
+  <cluster name="sellerSession"   clusterAlg="polling" failover="true"  type="default">
+		<client name="smc1" >
+		    <socketpool initConn="5" connectTimeout="60000" timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000" 
+			maxActive="100" maxWait="1000" timeout="2000" hashingAlg="3">
+			     <servers>172.18.40.28:11211</servers>        
+		  </socketpool>
+	      </client>
+  </cluster>
+</memcached>

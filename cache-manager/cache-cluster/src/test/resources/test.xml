@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<memcached>
+	<cluster name="prod_itemcode_0"   clusterAlg="polling" failover="true">
+		<client name="m1"  protocol="redis">
+		    <socketpool initConn="5" connectTimeout="60000" timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000" 
+			maxActive="100" maxWait="1000" timeout="2000" hashingAlg="3">
+			  <servers>192.168.223.11:6300</servers>
+		  </socketpool>
+	      </client>
+	<client name="m2" >
+		   
+		    <socketpool initConn="5" connectTimeout="60000" timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000" 
+			maxActive="100" maxWait="1000"  timeout="10000" hashingAlg="3">
+			<servers>192.168.1.165:11211</servers>  
+		  </socketpool>
+	 </client>
+  </cluster>
+  
+  <cluster name="prod_itemcode_1"   clusterAlg="polling" failover="true">
+		
+
+         <client name="m1"  protocol="redis">
+		    <socketpool initConn="5" connectTimeout="60000" timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000" 
+			maxActive="100" maxWait="1000" timeout="2000" hashingAlg="3">
+			  <servers>192.168.223.11:6300</servers>
+		  </socketpool>
+	      </client>
+
+	<client name="m2" >
+		   
+		    <socketpool initConn="5" connectTimeout="60000" timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000" 
+			maxActive="100" maxWait="1000"  timeout="10000" hashingAlg="3">
+			<servers>192.168.1.165:11211</servers>  
+		  </socketpool>
+	 </client>
+  </cluster>
+  
+  <cluster name="prod_itemcode_2"   clusterAlg="polling" failover="true">
+		  <client name="m1"  protocol="redis">
+		    <socketpool initConn="5" connectTimeout="60000" timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000" 
+			maxActive="100" maxWait="1000" timeout="2000" hashingAlg="3">
+			  <servers>192.168.223.11:6300</servers>
+		  </socketpool>
+	      </client>
+	<client name="m2" >
+		   
+		    <socketpool initConn="5" connectTimeout="60000" timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000" 
+			maxActive="100" maxWait="1000"  timeout="10000" hashingAlg="3">
+			<servers>192.168.1.165:11211</servers>  
+		  </socketpool>
+	 </client>
+  </cluster>
+  
+  <cluster name="prod_itemcode_3"   clusterAlg="polling" failover="true">
+		  <client name="m1"  protocol="redis">
+		    <socketpool initConn="5" connectTimeout="60000" timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000" 
+			maxActive="100" maxWait="1000" timeout="2000" hashingAlg="3">
+			  <servers>192.168.223.11:6300</servers>
+		  </socketpool>
+	      </client>
+	<client name="m2" >
+		   
+		    <socketpool initConn="5" connectTimeout="60000" timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000" 
+			maxActive="100" maxWait="1000"  timeout="10000" hashingAlg="3">
+			<servers>192.168.1.165:11211</servers>  
+		  </socketpool>
+	 </client>
+  </cluster>
+  
+  <cluster name="prod_itemcode_4"   clusterAlg="polling" failover="true">
+		  <client name="m1"  protocol="redis">
+		    <socketpool initConn="5" connectTimeout="60000" timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000" 
+			maxActive="100" maxWait="1000" timeout="2000" hashingAlg="3">
+			  <servers>192.168.223.11:6300</servers>
+		  </socketpool>
+	      </client>
+	<client name="m2" >
+		   
+		    <socketpool initConn="5" connectTimeout="60000" timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000" 
+			maxActive="100" maxWait="1000"  timeout="10000" hashingAlg="3">
+			<servers>192.168.1.165:11211</servers>  
+		  </socketpool>
+	 </client>
+  </cluster>
+  
+  <cluster name="prod_itemcode_5"   clusterAlg="polling" failover="true">
+		  <client name="m1"  protocol="redis">
+		    <socketpool initConn="5" connectTimeout="60000" timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000" 
+			maxActive="100" maxWait="1000" timeout="2000" hashingAlg="3">
+			  <servers>192.168.223.11:6300</servers>
+		  </socketpool>
+	      </client>
+	<client name="m2" >
+		   
+		    <socketpool initConn="5" connectTimeout="60000" timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000" 
+			maxActive="100" maxWait="1000"  timeout="10000" hashingAlg="3">
+			<servers>192.168.1.165:11211</servers>  
+		  </socketpool>
+	 </client>
+  </cluster>
+  
+  <cluster name="prod_itemcode_6"   clusterAlg="polling" failover="true">
+		  <client name="m1"  protocol="redis">
+		    <socketpool initConn="5" connectTimeout="60000" timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000" 
+			maxActive="100" maxWait="1000" timeout="2000" hashingAlg="3">
+			  <servers>192.168.223.11:6300</servers>
+		  </socketpool>
+	      </client>
+	<client name="m2" >
+		   
+		    <socketpool initConn="5" connectTimeout="60000" timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000" 
+			maxActive="100" maxWait="1000"  timeout="10000" hashingAlg="3">
+			<servers>192.168.1.165:11211</servers>  
+		  </socketpool>
+	 </client>
+  </cluster>
+  
+  <cluster name="prod_itemcode_7"   clusterAlg="polling" failover="true">
+		  <client name="m1"  protocol="redis">
+		    <socketpool initConn="5" connectTimeout="60000" timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000" 
+			maxActive="100" maxWait="1000" timeout="2000" hashingAlg="3">
+			  <servers>192.168.223.11:6300</servers>
+		  </socketpool>
+	      </client>
+	<client name="m2" >
+		   
+		    <socketpool initConn="5" connectTimeout="60000" timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000" 
+			maxActive="100" maxWait="1000"  timeout="10000" hashingAlg="3">
+			<servers>192.168.1.165:11211</servers>  
+		  </socketpool>
+	 </client>
+  </cluster>
+  
+  <cluster name="prod_itemcode_8"   clusterAlg="polling" failover="true">
+		  <client name="m1"  protocol="redis">
+		    <socketpool initConn="5" connectTimeout="60000" timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000" 
+			maxActive="100" maxWait="1000" timeout="2000" hashingAlg="3">
+			  <servers>192.168.223.11:6300</servers>
+		  </socketpool>
+	      </client>
+	<client name="m2" >
+		   
+		    <socketpool initConn="5" connectTimeout="60000" timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000" 
+			maxActive="100" maxWait="1000"  timeout="10000" hashingAlg="3">
+			<servers>192.168.1.165:11211</servers>  
+		  </socketpool>
+	 </client>
+  </cluster>
+  
+  <cluster name="prod_itemcode_9"   clusterAlg="polling" failover="true">
+		  <client name="m1"  protocol="redis">
+		    <socketpool initConn="5" connectTimeout="60000" timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000" 
+			maxActive="100" maxWait="1000" timeout="2000" hashingAlg="3">
+			  <servers>192.168.223.11:6300</servers>
+		  </socketpool>
+	      </client>
+	<client name="m2" >
+		   
+		    <socketpool initConn="5" connectTimeout="60000" timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000" 
+			maxActive="100" maxWait="1000"  timeout="10000" hashingAlg="3">
+			<servers>192.168.1.165:11211</servers>  
+		  </socketpool>
+	 </client>
+  </cluster>
+  
+</memcached>

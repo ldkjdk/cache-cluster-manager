@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<memcached>
+	<cluster name="memcachedCluster" clusterAlg="polling" failover="true"type="default">
+		<client name="mclient1">
+			<socketpool initConn="5" connectTimeout="60000"
+				timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000"
+				maxActive="100" timeout="3000" hashingAlg="3">
+				<servers>192.168.1.165:11211</servers>
+			</socketpool>
+		</client>
+
+		<client name="mclient2" protocol="redis" weight="1">
+			
+			<socketpool initConn="5" connectTimeout="60000"
+				timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000"
+				maxActive="100" timeout="3000" hashingAlg="3">
+				<servers>192.168.223.11:6300</servers>
+			</socketpool>
+		</client>
+
+		<client name="mclient3" protocol="ssdb" weight="1">
+			
+			<socketpool initConn="5" connectTimeout="60000"
+				timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000"
+				maxActive="100" timeout="3000" hashingAlg="3">
+				<servers>172.30.40.17:7900,172.30.40.17:7901</servers>
+			</socketpool>
+		</client>
+
+	</cluster>
+
+	<cluster name="redisLockCluster" clusterAlg="polling" failover="true"type="redis">
+
+		<client name="m1" protocol="redis" weight="1">
+
+			<socketpool initConn="5" connectTimeout="60000"
+				timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000"
+				maxActive="100" timeout="3000" hashingAlg="3">
+				<servers>192.168.223.11:6300</servers>
+			</socketpool>
+		</client>
+
+		<client name="m2" protocol="redis" weight="1">
+
+			<socketpool initConn="5" connectTimeout="60000"
+				timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000"
+				maxActive="100" timeout="3000" hashingAlg="3">
+				<servers>192.168.223.11:7003</servers>
+			</socketpool>
+		</client>
+
+	</cluster>
+	
+	<cluster name="ssdbCluster" clusterAlg="polling" failover="true"type="ssdb">
+
+		<client name="mclient3" protocol="ssdb" weight="1">
+			<socketpool initConn="5" connectTimeout="60000"
+				timeBetweenEvictionRunsMillis="3000" minEvictableIdleTimeMillis="15000"
+				maxActive="100" timeout="3000" hashingAlg="3">
+				<servers>172.30.40.17:7900,172.30.40.17:7901</servers>
+			</socketpool>
+		</client>
+	</cluster>
+
+</memcached>
+ 
