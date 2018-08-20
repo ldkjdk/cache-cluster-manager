@@ -29,17 +29,19 @@ public class MemcachedCacheClusterTest {
 	}
 
 	@Test
-	public void testAdd2 () {
+	public void testAdd2 () throws InterruptedException {
 		cache.delete(key);
 		 cache.add(key, addV);
+		 Thread.sleep(100);
 		 boolean f = cache.add(key, replaceV);
 		String v = cache.get(key).toString();
 		assertTrue(addV.equals(v) && f == false);
 	}
 	
 	@Test
-	public void testReplace1 () {
+	public void testReplace1 () throws Exception {
 		cache.delete(key);
+		Thread.sleep(100);
 		//cache.add(key, addV);
 		boolean f = cache.replace(key, "dddd");
 		assertFalse(f);

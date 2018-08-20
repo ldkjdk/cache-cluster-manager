@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * The SSDB interface.
+ * The SSDB server access interface.
  * 
  * 
  * @author lidingkun

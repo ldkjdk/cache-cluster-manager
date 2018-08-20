@@ -38,4 +38,8 @@ public class ClusterProcessorManager {
     public void exec (Runnable run) {
     	threadPool.execute(run);
     }
+    
+    public void shutDown () {
+    	this.threadPool.shutdown();
+    }
 }

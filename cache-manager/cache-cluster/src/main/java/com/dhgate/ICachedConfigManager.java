@@ -6,7 +6,7 @@ import com.dhgate.memcache.IMemCached;
 import com.dhgate.redis.IRedisDao;
 import com.dhgate.ssdb.ISSDBDao;
 
-/**
+/** cache server connection manager.
  * 
  * @author lidingkun
  *
@@ -49,7 +49,7 @@ public interface ICachedConfigManager {
 	public static final String DIAMOND_CACHE_DEFAULT_DATAID = "dhgate_default_cache";
 	
     /**
-     * 获取配置在memcached.xml中的Cache客户端
+     * get a memcached  connection instance by client name.
      * 
      * @param name
      * @return IMemCached
@@ -57,14 +57,40 @@ public interface ICachedConfigManager {
     public IMemCached getCache(String name);
 
     /**
-     * 获取配置在memcached.xml中的Cache客户端Cluster
+     * get a memcached server cluster by cluster name.
      * 
      * @param name
      * @return IMemCached (cluster)
      */
     public IMemCached getCacheCluster(String name);
+    
+    /**
+     * get a redis server cluster by cluster name.
+     * 
+     * @param name
+     * @return IRedisDao (cluster)
+     */
+    
     public IRedisDao getRedisCacheCluster(String name);
+    
+    /**
+     * get a ssdb server cluster by cluster name.
+     * @param name
+     * @return
+     */
+    
     public ISSDBDao getSSDBCluster(String name);
+    
+    /**
+     * destory the clients of the have removed from configuration file.
+     * @param deadlist
+     */
+    
     public void destory(Collection<IMemCached> deadlist);
+    
+    /**
+     * to stop work, will shutdown the ExecutorService from ICachedConfigManager.
+     */
+    public void close();
 
 }

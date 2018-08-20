@@ -8,10 +8,9 @@ import java.util.concurrent.TimeUnit;
 import com.dhgate.redis.clients.jedis.JedisPubSub;
 
 /**
- * Added for unify the interface use. To be compatible with previous methods in JedisManager,
- * involved some methods which marked as deprecated.
+ * The redis server access interface.
  * 
- * @since 1.5
+ * 
  * @author lidingkun
  *
  */
