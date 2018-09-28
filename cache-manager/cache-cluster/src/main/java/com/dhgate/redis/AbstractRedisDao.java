@@ -332,7 +332,7 @@ public abstract class AbstractRedisDao implements IRedisDao,IMemCached {
 		return getHashObjectByType(key, field, 0, OBJECT_TYPE);
 	}
 	
-	private Object getHashObjectByType(String key, String field, int type,int index){
+	private Object getHashObjectByType(String key, String field,int index,int type){
 		Object obj = null;
 		if(key == null || field == null){
 			log.error("key or field is null in getHashObjectByType.");

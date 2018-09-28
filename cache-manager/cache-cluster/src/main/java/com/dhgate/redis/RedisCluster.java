@@ -250,7 +250,7 @@ public class RedisCluster extends AbstractRedisDao implements ICacheCluster{
 			AbstractRedisDao dao = iterator.next();
 			if (dao.isSlave())
 				continue;
-			ret = dao.expire(key, index);
+			ret = dao.expire(key, seconds,index);
 			if (this.isAsyn)
 				break;
 		}
@@ -262,7 +262,7 @@ public class RedisCluster extends AbstractRedisDao implements ICacheCluster{
 					while (iterator.hasNext()) {
 						AbstractRedisDao dao = iterator.next();
 						if (dao.isSlave()) continue;
-						    dao.expire(key, index);
+						 dao.expire(key, seconds,index);
 					}
 				}
 			};
